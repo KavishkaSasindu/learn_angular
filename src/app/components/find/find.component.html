@@ -1,0 +1,26 @@
+<mat-form-field class="example-full-width" style="width: 90%; appearance: fill;">
+    <mat-label>Search Here</mat-label>
+    <input matInput placeholder="Ex.Post Id" value="Sushi" [(ngModel)]="searchId"
+    (keyup.enter)="loadData()">
+  </mat-form-field>
+
+  <hr>
+
+  <table class="table table hover">
+    <thead>
+        <tr>
+            <th>#Id</th>
+            <th>Title</th>
+            <th>User Id</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempData of list">
+            <td>{{tempData.id}}</td>
+            <td>{{tempData.userId}}</td>
+            <td>{{tempData.title}}</td>
+            <td>{{tempData.body}}</td>
+        </tr>
+    </tbody>
+</table>

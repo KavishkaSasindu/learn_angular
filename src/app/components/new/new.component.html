@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="createData()">
+
+    <div class="container">
+        <div class="col-12">
+            <mat-form-field class="example-full-width">
+                <mat-label>Id</mat-label>
+                <input matInput placeholder="Ex. 1" formControlName="id">
+              </mat-form-field>
+        </div>
+        <div class="col-12">
+            <mat-form-field class="example-full-width">
+                <mat-label>User Id</mat-label>
+                <input matInput placeholder="Ex. 1" formControlName="userId">
+              </mat-form-field>
+        </div>
+        <div class="col-12">
+            <mat-form-field class="example-full-width">
+                <mat-label>Title</mat-label>
+                <input matInput placeholder="Ex. 1" formControlName="title">
+              </mat-form-field>
+        </div>
+        <div class="col-12">
+            <mat-form-field class="example-full-width">
+                <mat-label>Body</mat-label>
+                <textarea matInput placeholder="Ex. Type Here" rows="8" formControlName="body"></textarea>
+              </mat-form-field>
+        </div>
+        <div class="col-12">
+           <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Save Data</button>
+        </div>
+    </div>
+</form>
